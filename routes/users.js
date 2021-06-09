@@ -4,7 +4,7 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  const data = User.find();
+  const data = User.find().toArray();
   res.send(data);
 });
 
